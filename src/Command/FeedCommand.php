@@ -49,10 +49,6 @@ class FeedCommand
             $type
         );
 
-        $output->writeln($importer->key());
-
-        $output->writeln($result->type());
-
         $duration = round(microtime(true) - $startTime, 2);
         $memoryUsed = round((memory_get_peak_usage(true) - $startMemory) / 1024 / 1024, 2);
 
