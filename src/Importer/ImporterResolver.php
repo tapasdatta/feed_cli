@@ -4,7 +4,7 @@ namespace App\Importer;
 
 use InvalidArgumentException;
 
-class ImporterResolver
+final class ImporterResolver
 {
     private iterable $importers;
 
