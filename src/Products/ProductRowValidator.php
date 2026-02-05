@@ -22,7 +22,6 @@ class ProductRowValidator implements RowValidatorInterface
         $errors = $this->validator->validate($product);
 
         if (count($errors) > 0) {
-
             foreach ($errors as $violation) {
                 $this->errors[] = [
                     'field'   => $violation->getPropertyPath(),

@@ -16,46 +16,39 @@ class Product
     private ?int $id = null;
 
     #[ORM\Column(length: 32)]
-    #[Assert\NotBlank]
     #[Assert\Length(
         max: 32,
     )]
     private ?string $gtin = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
     #[Assert\Length(
         max: 2,
     )]
     private ?string $language = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
     #[Assert\Length(
         max: 255,
     )]
     private ?string $title = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
     #[Assert\Length(
         max: 255,
     )]
     private ?string $picture = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
     #[Assert\Length(
         max: 255,
     )]
     private ?string $description = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
-    #[Assert\NotBlank]
     private ?string $price = null;
 
     #[ORM\Column]
-    #[Assert\NotBlank]
     private ?int $stock = null;
 
     public function getId(): ?int
